@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<script>
+   function B(f)
+   {
+	   if(required(f.T1,"Enter your name")==false)
+	      f.T1.focus();
+		  return false;
+   }
+   function required(ele,msg)
+   {
+	   if(ele.value==null||ele.value=="")
+	   {
+		   alert(msg);
+		   return false;
+	   }
+	   else
+	     return true;
+   }
+   
+</script>
+
+<body>
+<form name="form1" method="post"onsubmit="return B(this)" action="HospitalReg1.php>
+  <p>Name:
+    <input type="text" name="T1" id="T1">
+  </p>
+  <p>Email:
+     <input type="text" name="T2" id="T2">
+  </p>
+  <p>Password:
+    <input type="text" name="T3" id="T3">
+  </p>
+  <p>Confirm Password:
+     <input type="text" name="T4" id="T4">
+  </p>
+  <p>Mobile Number:
+      <input type="text" name="T5" id="T5">
+  </p>
+  <input type="submit" name="T6" id="T6" input="submit"/>
+</form>
+</body>
+</html>

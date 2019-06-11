@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Multiple Buttons</title>
+</head>
+<body>
+  <form id="T1" name="T1" method="post" action="square2.php">
+  <p>
+    Number:<input type="text" name="T1" id="T1" />
+  </p>
+  <input type="submit" name="B1" value="Square" id="B1" />
+  <input type="submit" name="B2" value="Cube" id="B2" />
+  <input type="submit" name="B2" value="Half" id="B2" />
+  </form>
+</body>
+</html>

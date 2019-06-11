@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+				*_Validetion_* 
+
+<script>
+function B(f)
+{
+    if(required(f.T1,"Enter name")==false)
+	{
+		f.T1.focus();
+		return false;
+	}
+	else if(required(f.T3,"Enter Address")==false)
+	{
+		f.T3.focus();
+		return false;
+	}
+	else if(required(f.T4,"Enter City")==false)
+	{
+		f.T4.focus();
+		return false;
+	}
+	else if(required(f.T5,"Enter Contact")==false)
+	{
+		f.T5.focus();
+		return false;
+	}
+	else if(check_mobile(6000000000,9999999999,f.T5,"Invalid Mobile number")==false)
+	{
+		f.T5.focus();
+		return false;
+	}
+	else if(required(f.T6,"Enter Email")==false)
+	{
+		f.T6.focus();
+		return false;
+	}
+	else if(checkEmail(f.T6,"Please Enter Email")==false)
+		{
+			t6.focus();
+			return false;
+		}
+	else if(required(f.T7,"Enter Password")==false)
+	{
+		f.T7.focus();
+		return false;
+	}
+	else if(match_password(f.T7,f.T8,"Invalid password")==false)
+	{
+		f.T7.value="";
+		f.T8.value="";
+		f.T7.focus();
+		return false;
+	}
+	
+		
+}
+
+<!-- end function B(f)-->
+
+function match_password(ele1,ele2,msg)
+{
+	if(ele1.value!=ele2.value)
+	{
+		alert(msg);
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+function required(ele,msg)
+{
+	if(ele.value==null || ele.value=="")
+	{
+		alert(msg);
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+
+function check_mobile(mn,mx,ele,msg)
+{
+	if(ele.value<mn || ele.value>mx)
+	{
+		alert(msg);
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+</script>
+
+
+
+
+
+
+<form id="form1" name="form1" method="post" onsubmit="return B(this)" action="AdminReg1.php" >
+    <table cellspacing="10">
+        <tr>       
+        	<td>Name</td>
+        	<td><input type="text" name="T1" id="T1" /></td>
+        </tr>
+        <tr>
+        	<td>DOB(yyyy/mm/dd)</td>
+        	<td><input type="date" name="T2" id="T2" /></td>
+        </tr>
+        <tr>
+        	<td>Address</td>
+        	<td><input type="text" name="T3" id="T3" /></td>
+        </tr>
+        <tr>
+        	<td>City</td>
+        	<td><input type="text" name="T4" id="T4" /></td>
+        </tr>
+        <tr>
+        	<td>Contact</td>
+        	<td><input type="text" name="T5" id="T5"  /></td>
+        </tr>
+        <tr>
+        	<td>Email</td>
+        	<td><input type="email" name="T6" id="T6" /></td>
+        </tr>
+        <tr>
+        	<td>Password</td>
+        	<td><input type="password" name="T7" id="T7" /></td>
+        </tr>
+        <tr>
+        	<td>Confirm Password</td>
+        	<td><input type="password" name="T8" id="T8" /></td>
+        </tr>
+        <tr>
+        	<td><input type="submit" name="B1" id="B1" value="Register" /></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
